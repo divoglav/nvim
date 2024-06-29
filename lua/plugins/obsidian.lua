@@ -13,8 +13,8 @@ return {
     require("obsidian").setup({
       workspaces = {
         {
-          name = "vault",
-          path = "~/base/vault",
+          name = "core",
+          path = "~/base/core",
         },
       },
 

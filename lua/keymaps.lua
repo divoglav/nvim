@@ -71,8 +71,5 @@ map({ "n", "v" }, "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Backlink
 
 map({ "n", "v" }, "<leader>op", "<cmd>ObsidianPasteImg<cr>", { desc = "Paste Image" })
 
--- Neogit
-map({ "n", "v" }, "<leader>g", "<cmd>Neogit<cr>", { desc = "Neogit" })
-
 -- xd
 map({ "n", "v" }, "<leader>m", "<cmd>CellularAutomaton make_it_rain<cr>", { desc = "Make it Rain" })

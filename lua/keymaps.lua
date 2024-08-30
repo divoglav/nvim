@@ -47,13 +47,18 @@ map({ "n", "v" }, "<leader>x", function()
   vim.wo.wrap = not wrap_status
   vim.wo.cursorline = not wrap_status
 end, { desc = "Toggle Wrap and Cursorline" })
-map({ "n", "v" }, "<leader>c", "<cmd>Centerpad<cr>", { desc = "Centerpad" })
 
 -- Splits
 map({ "n", "v" }, "<C-A-h>", "<C-w><", { desc = "Decrease Width" })
 map({ "n", "v" }, "<C-A-j>", "<C-w>-", { desc = "Decrease Height" })
 map({ "n", "v" }, "<C-A-k>", "<C-w>+", { desc = "Increase Height" })
 map({ "n", "v" }, "<C-A-l>", "<C-w>>", { desc = "Increase Width" })
+
+-- Copilot
+
+-- cc to enable, cq to disable:
+map({ "n", "v" }, "<leader>cc", "<cmd>Copilot enable<CR>", { desc = "Enable Copilot" })
+map({ "n", "v" }, "<leader>cq", "<cmd>Copilot disable<CR>", { desc = "Disable Copilot" })
 
 -- Obsidian
 map({ "n", "v" }, "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open" })

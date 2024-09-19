@@ -1,3 +1,5 @@
+-- Fast, precise motion navigation within buffers.
+
 return {
   "ggandor/leap.nvim",
   config = function()

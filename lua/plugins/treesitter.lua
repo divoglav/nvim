@@ -1,3 +1,5 @@
+-- Provides better syntax highlighting and code understanding.
+
 return {
   {
     "windwp/nvim-ts-autotag",

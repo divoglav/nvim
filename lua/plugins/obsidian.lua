@@ -1,3 +1,5 @@
+-- Integrates Obsidian notes into Neovim.
+
 return {
   "epwalsh/obsidian.nvim",
 

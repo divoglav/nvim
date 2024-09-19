@@ -1,3 +1,5 @@
+-- A customizable color scheme for Neovim.
+
 return {
   "catppuccin/nvim",
   name = "catppuccin",

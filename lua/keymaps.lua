@@ -54,12 +54,6 @@ map({ "n", "v" }, "<C-A-j>", "<C-w>-", { desc = "Decrease Height" })
 map({ "n", "v" }, "<C-A-k>", "<C-w>+", { desc = "Increase Height" })
 map({ "n", "v" }, "<C-A-l>", "<C-w>>", { desc = "Increase Width" })
 
--- Copilot
-
--- cc to enable, cq to disable:
-map({ "n", "v" }, "<leader>cc", "<cmd>Copilot enable<CR>", { desc = "Enable Copilot" })
-map({ "n", "v" }, "<leader>cq", "<cmd>Copilot disable<CR>", { desc = "Disable Copilot" })
-
 -- Obsidian
 map({ "n", "v" }, "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open" })
 map({ "n", "v" }, "<leader>oh", "<cmd>ObsidianCheck<cr>", { desc = "Health" })

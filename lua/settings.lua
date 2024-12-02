@@ -25,6 +25,7 @@ o.wrap = false                -- Word wrap.
 
 o.timeoutlen = 300;           -- Delay for key stuff.
 
+o.equalalways = false          -- Don't resize splits automatically.
 o.splitright = true           -- Split vertical window to the right.
 o.splitbelow = true           -- Split horizontal window to the bottom.
 

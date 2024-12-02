@@ -18,6 +18,10 @@ return {
           name = "vault",
           path = "~/core/vault/",
         },
+        {
+          name = "grappling",
+          path = "~/core/grappling/",
+        },
       },
 
       notes_subdir = "nodes",

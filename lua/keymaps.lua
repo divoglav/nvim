@@ -36,16 +36,16 @@ map({ "n", "v" }, "<leader>fs", "<cmd>LspStop<CR>", { desc = "Stop" })
 map({ "n", "v" }, "<leader>fg", "<cmd>LspInfo<CR>", { desc = "Info" })
 map({ "n", "v" }, "<leader>fr", "<cmd>LspRestart<CR>", { desc = "Restart" })
 map({ "n", "v" }, "<leader>ff", function()
-  vim.lsp.buf.format({ async = true })
+	vim.lsp.buf.format({ async = true })
 end, { desc = "Format" })
 map({ "n", "v" }, "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Format" })
 
 -- Workspace
 map({ "n", "v" }, "<leader>z", "<cmd>set nu!<CR>", { desc = "Toggle Numbers" })
 map({ "n", "v" }, "<leader>x", function()
-  local wrap_status = vim.wo.wrap
-  vim.wo.wrap = not wrap_status
-  vim.wo.cursorline = not wrap_status
+	local wrap_status = vim.wo.wrap
+	vim.wo.wrap = not wrap_status
+	vim.wo.cursorline = not wrap_status
 end, { desc = "Toggle Wrap and Cursorline" })
 
 -- Splits
@@ -69,6 +69,3 @@ map({ "n", "v" }, "<leader>ol", "<cmd>ObsidianLinks<cr>", { desc = "Links" })
 map({ "n", "v" }, "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Backlinks" })
 
 map({ "n", "v" }, "<leader>op", "<cmd>ObsidianPasteImg<cr>", { desc = "Paste Image" })
-
--- xd
-map({ "n", "v" }, "<leader>m", "<cmd>CellularAutomaton make_it_rain<cr>", { desc = "Make it Rain" })

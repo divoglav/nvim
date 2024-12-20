@@ -12,9 +12,7 @@ return {
 
     build = ":TSUpdate",
 
-    dependencies = {
-      "windwp/nvim-ts-autotag",
-    },
+    dependencies = { "windwp/nvim-ts-autotag" },
 
     config = function()
       require("nvim-treesitter.configs").setup({
@@ -37,14 +35,9 @@ return {
           "hlsl",
         },
 
-        highlight = {
-          enable = true,
-        },
-
-        indent = {
-          enable = true,
-        },
+        highlight = { enable = true },
+        indent = { enable = true },
       })
-    end
-  }
+    end,
+  },
 }

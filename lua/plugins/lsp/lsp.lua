@@ -13,21 +13,21 @@ return {
     local capabilities = cmp_nvim_lsp.default_capabilities()
     local mason_lspconfig = require("mason-lspconfig")
 
-    -- local custom_hover = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+    local custom_hover = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
 
     -- Setup LSP servers
     mason_lspconfig.setup_handlers({
       function(server_name)
         lspconfig[server_name].setup({
           capabilities = capabilities,
-          -- handlers = { ["textDocument/hover"] = custom_hover, },
+          handlers = { ["textDocument/hover"] = custom_hover, },
         })
       end,
     })
 
     lspconfig.lua_ls.setup({
       capabilities = capabilities,
-      -- handlers = { ["textDocument/hover"] = custom_hover, },
+      handlers = { ["textDocument/hover"] = custom_hover, },
       settings = {
         Lua = {
           diagnostics = {

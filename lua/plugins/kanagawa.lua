@@ -9,7 +9,7 @@ return {
 
   config = function()
     require("kanagawa").setup({
-      compile = true,
+      compile = false, -----------------------------------------------------------------------
       -- NOTE: If you enable compilation, run :KanagawaCompile
       -- command every time you make changes to your config.
 
@@ -39,17 +39,34 @@ return {
 
       overrides = function(colors)
         local theme = colors.theme
+        local palette = colors.palette
         return {
+          -- Floats
           NormalFloat = { bg = "none" },
           FloatBorder = { bg = "none" },
           FloatTitle = { bg = "none" },
+
+          -- Windows
           NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
           LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
           MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+
+          -- Popup Menu
           Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
-          PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+          PmenuSel = { fg = "none", bg = theme.ui.bg_p2 },
           PmenuSbar = { bg = theme.ui.bg_m1 },
           PmenuThumb = { bg = theme.ui.bg_p2 },
+
+          -- Syntax
+          Constant = { fg = palette.fujiWhite },
+          Boolean = { fg = palette.surimiOrange, bold = false },
+          -- Operator = { bold = true}
+
+          -- Treesitter
+          ["@lsp.typemod.function.readonly"] = { bold = false },
+          ["@markup.strong"] = { fg = palette.surimiOrange, bold = true, }
+
+
         }
       end,
     })

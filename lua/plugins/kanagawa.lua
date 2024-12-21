@@ -9,8 +9,7 @@ return {
 
   config = function()
     require("kanagawa").setup({
-      compile = false, -----------------------------------------------------------------------
-      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      compile = true,
       -- NOTE: If you enable compilation, run :KanagawaCompile
       -- command every time you make changes to your config.
 
@@ -44,17 +43,27 @@ return {
         return {
           -- Syntax --
           Normal = { fg = palette.oldWhite },
+          Number = { fg = palette.surimiOrange },
           Constant = { fg = palette.fujiWhite },
           Boolean = { fg = palette.surimiOrange, bold = false },
+          PreProc = { fg = palette.sakuraPink, italic = true },
 
+          -- Treesitter --
           ["@markup.heading"] = { fg = palette.sakuraPink, bold = true },
           ["@markup.strong"] = { fg = palette.surimiOrange, bold = true },
           ["@markup.italic"] = { fg = palette.springGreen, italic = true },
           ["@markup.raw"] = { fg = palette.fujiWhite },
           ["@markup.raw.markdown_inline"] = { fg = palette.fujiWhite, bg = palette.sumiInk4 },
 
-          -- Treesitter --
+          ["@keyword.exception"] = { bold = false },
+          ["@keyword.return"] = { fg = palette.oniViolet },
+
+          ["@module.builtin"] = { fg = palette.waveRed },
+          ["@namespace.builtin"] = { fg = palette.waveRed },
+          ["@variable.builtin"] = { fg = palette.waveRed, italic = false },
+
           ["@lsp.typemod.function.readonly"] = { bold = false },
+          ["@lsp.typemod.variable.defaultLibrary"] = { fg = palette.waveRed },
 
           -- UI ---
           NormalFloat = { bg = "none" },

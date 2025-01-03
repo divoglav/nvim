@@ -39,12 +39,14 @@ o.termguicolors = true        -- Enable 24-bit RGB colors.
 
 vim.opt.shortmess:append("I") -- Disable welcome message.
 
+vim.opt.iskeyword:remove("_") -- Treat "_" as a symbol.
+
 vim.diagnostic.config({
-  virtual_text = false,       -- Inline text
-  signs = true,               -- Sign column
-  underline = true,           -- Underlines
-  update_in_insert = false,   -- Updates in insert mode
-  severity_sort = true,       -- Sort by severity
+  virtual_text = false,     -- Inline text
+  signs = true,             -- Sign column
+  underline = true,         -- Underlines
+  update_in_insert = false, -- Updates in insert mode
+  severity_sort = true,     -- Sort by severity
 })
 
 g.loaded_node_provider = 0
